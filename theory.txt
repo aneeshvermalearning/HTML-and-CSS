@@ -1,0 +1,81 @@
+INTRODUCTION
+
+Everyone's css is different.
+
+Can be extended with Sass/Less to programming logic like variables.
+
+3 methods: inline(horrible practice to use this..should keep different..separate style from presentation),
+internal(cannot use that css anywhere else) and external
+
+type="text/css" not required from HTML 4 in link tag.
+
+CSS syntax
+selector => declaration start => property => property/value separator => value => declaration separator 
+=> declaration end.
+
+a{
+    background-color:yellow;
+}
+
+a(selector){(declaration start)
+    background-color(property):(property/value separator ) yellow(value);(declaration separator)
+}(declaration end)
+******************************************************************************************************
+
+COLORS IN CSS
+
+Colors values which can be used:
+1. color names.....eg red,green
+2. HTML5 color names .....eg coral, mistyrose
+3. Hexadecimal.....eg #00ff00....#000000 is black...#ffffff is white
+    Can use shortcut.. use 3 instead of 6 for some colors
+4. RGB(red green blue).....eg rgb(0,0,255)
+    RGB black => rgb(0,0,0)
+    RGB white => rgb(255,255,255)
+
+******************************************************************************************************
+FONTS
+
+font-family: Arial, Helvetica, sans-serif; 
+=> Load Arial, if for some reason Arial cannot load then Helvetica, if cannot Helvetica then 
+basic sans-serif which is also the type of font.
+
+In CSS you have 2 types of fonts:
+1. websafe fonts => no need to import anything like Arial.
+* Times new Roman is default.
+* 5 types of basic fonts:
+    1. serif fonts have hooks to them..check assets/TYPEFACE.gif
+        Serif fonts include Times Roman, Courier, New Century Schoolbook, and Palatino.
+    2. sans-serif is kind of a flat look...check assets/TYPEFACE.gif. 
+        Popular sans serif fonts include Helvetica, Avant Garde, Arial, and Geneva
+    3. monospace => fixed-width fonts
+    4. cursive =>  fonts that emulate handwriting 
+    5. fantasy =>  decorative fonts, for titles, etc.
+2. other fonts => have to import like from bootstrap
+
+
+Default font size = 16 px
+
+Basic Font css =>
+font-size,font-weight, font-family
+
+We can use these properties indivually or in one line 
+
+ONE LINE:
+font: 16px normal Arial, Helvetica, sans-serif;
+/*
+Can rearrange.. just make sure this doesnt happen=>
+                
+                font: 16px Arial, Helvetica, sans-serif normal;
+*/
+
+. line-height:1.6 em
+/* 
+    em stands for “emphemeral unit”...just a unit. for responsive sites..used mostly in line height  
+    Originally, the em was equal to the width of the capital
+    letter M, which is where its name originated.”
+
+    Em is basically the font size relative to the font size of the parent elements. If the font size of your body tag would be 12px, then if you define a font size of 2em to a h1 tag. This font size would be 24px.
+    
+    https://www.quora.com/When-making-responsive-websites-is-it-best-to-use-measurement-unit-em-or-can-you-still-do-it-with-px
+*/    
